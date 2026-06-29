@@ -1,5 +1,5 @@
 /**
- * METAS CORPORATION 사업문의 접수용 Google Apps Script
+ * METAS CORPORATION 업무문의 접수용 Google Apps Script
  * 1) Apps Script 새 프로젝트 생성 (script.google.com)
  * 2) 이 Code.gs 전체 붙여넣기
  * 3) 배포 > 새 배포 > 웹 앱
@@ -14,7 +14,7 @@ function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents || '{}');
 
-    const subject = data.subject || '메타스코퍼레이션 사업문의';
+    const subject = data.subject || '메타스코퍼레이션 업무문의';
     const body = data.body || makeBodyFromData_(data);
 
     const options = {
@@ -48,7 +48,7 @@ function doPost(e) {
 }
 
 function makeBodyFromData_(data) {
-  return `[메타스코퍼레이션 사업문의]\n\n` +
+  return `[메타스코퍼레이션 업무문의]\n\n` +
     `■ 기본 정보\n` +
     `회사명: ${data.company || '-'}\n` +
     `담당자명: ${data.name || '-'}\n` +

@@ -883,3 +883,68 @@
   #process .section-head h2{font-size:25px;line-height:1.34}
   #process .section-head p{font-size:14.5px;line-height:1.75}
 }
+
+
+/* ===== Main copy refinement & inquiry wording v18 ===== */
+.hero-description{max-width:650px;margin-top:22px;display:grid;gap:10px}
+.hero-description p{max-width:none;margin:0;font-size:16px;line-height:1.78;word-break:keep-all}
+.business-overview-main>p+p{margin-top:12px}
+@media(max-width:620px){
+  .hero-description{margin-top:18px;gap:9px}
+  .hero-description p{font-size:15px;line-height:1.75}
+}
+
+
+/* ===== Trade inquiry heading line break v19 ===== */
+.inquiry-heading span{display:block}
+.inquiry-heading span+span{margin-top:2px}
+
+
+/* ===== Trade inquiry readability v20 ===== */
+.biz-panel .panel-title{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:14px;
+}
+.biz-panel .panel-title-copy{
+  width:100%;
+  min-width:0;
+}
+.biz-panel .panel-badge{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  padding:7px 14px;
+  line-height:1;
+}
+.biz-panel .inquiry-heading{
+  margin:0;
+  font-size:22px;
+  line-height:1.38;
+  letter-spacing:-.035em;
+  word-break:keep-all;
+}
+.biz-panel .inquiry-heading span{
+  display:block;
+  white-space:nowrap;
+}
+.biz-panel .inquiry-heading span+span{
+  margin-top:1px;
+}
+.biz-panel .panel-title-copy>p{
+  max-width:42ch;
+  margin-top:11px;
+  font-size:14px;
+  line-height:1.75;
+  word-break:keep-all;
+}
+@media(max-width:520px){
+  .biz-panel .panel-title{gap:12px}
+  .biz-panel .panel-badge{display:inline-flex;font-size:10.5px;padding:7px 12px}
+  .biz-panel .inquiry-heading{font-size:19px;line-height:1.4;letter-spacing:-.04em}
+  .biz-panel .panel-title-copy>p{font-size:13.5px;line-height:1.7}
+}
+@media(max-width:360px){
+  .biz-panel .inquiry-heading{font-size:17.5px}
+}
