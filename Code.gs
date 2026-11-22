@@ -5,7 +5,8 @@
  * 3) 배포 > 새 배포 > 웹 앱
  * 4) 실행 사용자: 나
  * 5) 액세스 권한: 모든 사용자
- * 6) 배포 URL을 index.html의 GOOGLE_SCRIPT_URL에 입력
+ * 6) 배포 URL을 inquiry.html의 GOOGLE_SCRIPT_URL에 입력
+ * 7) 코드를 수정한 뒤에는 배포 > 배포 관리 > 새 버전으로 다시 배포
  */
 
 const RECEIVER_EMAIL = 'business@metas-corp.com';
@@ -13,6 +14,13 @@ const RECEIVER_EMAIL = 'business@metas-corp.com';
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents || '{}');
+
+    // 스팸 방지: 숨김 칸(website)이 채워진 요청은 메일을 보내지 않음
+    if (data.website) {
+      return ContentService
+        .createTextOutput(JSON.stringify({ ok: true, message: 'ignored' }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
 
     const subject = data.subject || '메타스코퍼레이션 업무문의';
     const body = data.body || makeBodyFromData_(data);

@@ -76,12 +76,29 @@
 footer{padding-left:16px;padding-right:16px}
 @media(max-width:420px){.nav{gap:9px}.back{padding:9px 12px}}
 </style>
+<style>
+.blog-actions{display:flex;align-items:center;gap:8px}
+.blog-cta{text-decoration:none;font-size:13.5px;font-weight:800;color:#fff;background:#0a365a;padding:10px 16px;white-space:nowrap}
+.blog-cta:hover{background:#0b5fa8}
+footer.blog-footer{background:#082746;color:#c6d9e6;padding:34px 16px 38px;font-size:12.5px;text-align:left;line-height:1.75}
+footer.blog-footer .wrap{max-width:1120px;margin:0 auto}
+footer.blog-footer strong{color:#fff;font-size:13.5px;display:block;margin-bottom:4px}
+footer.blog-footer p{margin:0}
+footer.blog-footer a{color:#e8f3fb;text-decoration:none}
+footer.blog-footer .blog-footer-links{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+footer.blog-footer b{color:#fff}
+footer.blog-footer small{display:block;margin-top:10px;color:#93b0c4}
+@media(max-width:520px){.blog-cta{display:none}}
+</style>
+<link href="../assets/fonts/pretendard/pretendardvariable-dynamic-subset.css" rel="stylesheet"/>
+<link href="../assets/typography.css?v=20261122-v33" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/flat-corners.css?v=20261122-v3"/>
 </head>
 <body>
 <header>
   <div class="nav">
-    <a class="brand" href="../index.html" aria-label="METAS CORPORATION 홈"><img class="brand-logo" src="../assets/metas-logo.png" alt="METAS CORPORATION"></a>
-    <a class="back" href="index.html">← 블로그 목록</a>
+    <a class="brand" href="../index.html" aria-label="METAS CORPORATION 홈"><img class="brand-logo" src="../assets/metas-logo-transparent.png" alt="METAS CORPORATION"></a>
+    <div class="blog-actions"><a class="back" href="index.html">← 블로그 목록</a><a class="blog-cta" href="../inquiry.html">거래 문의하기</a></div>
   </div>
 </header>
 
@@ -113,13 +130,18 @@ footer{padding-left:16px;padding-right:16px}
   <div class="cta">
     <h3>직접 다 챙기기 어렵다면, 메타스가 대신합니다</h3>
     <p>공급처 발굴부터 검증, 검수, 통관, 납품까지 — 메타스코퍼레이션이 일괄 진행합니다.</p>
-    <a href="../index.html#quote">업무문의 접수하기</a>
+    <a href="../inquiry.html">업무문의 접수하기</a>
   </div>
 </article>
 
-<footer>
-  METAS CORPORATION · Business Inquiry: <a href="mailto:business@metas-corp.com">business@metas-corp.com</a><br>
-  © 2026 METAS CORPORATION. All rights reserved.
+<footer class="blog-footer">
+  <div class="wrap">
+  <strong>METAS CORPORATION</strong>
+  <p>메타스코퍼레이션 · 사업자등록번호 353-02-00683 · 부산광역시 해운대구 세실로 31</p>
+  <p><a href="mailto:business@metas-corp.com">business@metas-corp.com</a> · <a href="http://pf.kakao.com/_SASyn" rel="noopener" target="_blank">카카오톡 채널 @메타스코퍼레이션</a></p>
+  <p class="blog-footer-links"><a href="../business.html">사업분야</a><a href="../fee.html">수수료 안내</a><a href="../inquiry.html">거래 문의</a><a href="../privacy.html"><b>개인정보처리방침</b></a></p>
+  <small>© 2026 METAS CORPORATION. All rights reserved.</small>
+  </div>
 </footer>
 </body>
 </html>

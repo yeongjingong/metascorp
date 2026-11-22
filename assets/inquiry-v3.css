@@ -1,0 +1,17 @@
+/* 2026-11-22 v3: inquiry form validation, consent, spam trap. */
+.inquiry-page .req{color:#c8372b;font-style:normal;font-weight:900;margin-left:2px}
+.inquiry-page .hp-field{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.inquiry-page .field input.invalid,.inquiry-page .field textarea.invalid{border-color:#c8372b!important;background:#fff7f6}
+.inquiry-page .consent-box{margin-top:22px;border:1px solid #dfe7ee;background:#f7fafc;padding:16px 18px}
+.inquiry-page .consent-check{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:#0e2233;cursor:pointer;line-height:1.5}
+.inquiry-page .consent-check input{width:18px;height:18px;margin-top:1px;flex:none;accent-color:#0a365a}
+.inquiry-page .consent-check b{color:#0a365a}
+.inquiry-page .consent-detail{margin-top:10px;font-size:13px;color:#4a5f70}
+.inquiry-page .consent-detail summary{cursor:pointer;font-weight:700;color:#0b5fa8;width:max-content}
+.inquiry-page .consent-detail table{width:100%;border-collapse:collapse;margin:10px 0 8px;background:#fff}
+.inquiry-page .consent-detail th,.inquiry-page .consent-detail td{border:1px solid #dfe7ee;padding:8px 10px;text-align:left;vertical-align:top;line-height:1.55}
+.inquiry-page .consent-detail th{width:90px;background:#f1f6fa;color:#0e2233;white-space:nowrap}
+.inquiry-page .consent-detail p{line-height:1.6;margin:0}
+.inquiry-page .form-error{margin:14px 0 0;padding:11px 14px;background:#fff3f1;border-left:3px solid #c8372b;color:#9b2a20;font-size:14px;font-weight:600}
+.inquiry-page .form-error[hidden]{display:none}
+.inquiry-page .nav ul a[aria-current="page"]{color:#0b5fa8}

@@ -1,0 +1,51 @@
+/* Main-only refinement: establish first-screen hierarchy; retain full-bleed, image-free hero. */
+.home-page .home-hero{background:linear-gradient(110deg,#071e39 0%,#0c3155 58%,#14546a 100%);min-height:480px;overflow:hidden;}
+.home-page .home-hero-wrap{min-height:480px;justify-content:center;text-align:center;}
+.home-page .home-hero-content{width:100%;max-width:980px;padding:76px 0 80px;}
+.home-page .home-hero .home-kicker{color:#79dce0;justify-content:center;font-size:13px;letter-spacing:.16em;margin-bottom:20px;}
+.home-page .home-hero .home-kicker span{background:#79dce0;}
+.home-page .home-hero h1{color:#fff;font-size:clamp(40px,4.4vw,64px);line-height:1.24;max-width:100%;margin:0 auto;font-weight:900;}
+.home-page .home-hero h1 em{color:#78e0df;}
+.home-page .home-hero p{color:#d5e5ef;font-size:18px;max-width:760px;margin:22px auto 0;}
+.home-page .home-hero-actions{justify-content:center;margin-top:34px;gap:14px;}
+.home-page .home-hero-actions .btn.primary{background:#fff;border:1px solid #fff;color:#0a315b;}
+.home-page .home-hero-actions .btn.primary:hover{background:#d9f4f6;border-color:#d9f4f6;}
+.home-page .home-hero-actions .btn.ghost{background:transparent;border:1px solid #acc8dc;color:#fff;}
+.home-page .home-hero-actions .btn.ghost:hover{background:#ffffff18;}
+.home-page .home-hero-actions .btn{min-height:50px;padding:12px 25px;font-size:15px;}
+/* Four square product photos remain, but the cards are secondary to the company statement. */
+.home-page .home-business{padding:52px 0 58px;}
+.home-page .home-business-grid{gap:20px;grid-template-columns:repeat(4,minmax(0,1fr));max-width:1080px;margin-inline:auto;}
+.home-page .home-business-card{background:#fff;box-shadow:none;border:1px solid #e1e7ed;}
+.home-page .home-business-card:hover{transform:translateY(-2px);box-shadow:0 7px 18px #0a2e5b0d;}
+.home-page .home-business-card img{width:100%;height:auto!important;aspect-ratio:1;object-fit:cover;}
+.home-page .home-business-card-body{min-height:92px;gap:10px;padding:15px 13px 17px;}
+.home-page .home-business-card .business-icon{width:24px;height:24px;}
+.home-page .home-business-card h3{font-size:16px;line-height:1.35;}
+.home-page .home-business-card p{font-size:12px;line-height:1.55;}
+.home-page .home-why{margin-top:0;}
+/* The feed shows only published posts. A single post gets a readable horizontal layout. */
+.home-page .home-blog-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;min-height:0;}
+.home-page .home-blog-grid[data-count="1"]{grid-template-columns:minmax(0,1fr);}
+.home-page .home-blog-grid[data-count="2"]{grid-template-columns:repeat(2,minmax(0,1fr));}
+.home-page .home-insight-card{box-shadow:none;}
+.home-page .home-insight-card>a{display:flex;flex-direction:column;height:100%;}
+.home-page .home-insight-card .post-thumb{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;background:#ecf3f7;color:#234b69;overflow:hidden;text-align:center;font-size:11px;letter-spacing:.08em;font-weight:800;padding:9px;}
+.home-page .home-insight-card .post-thumb.has-image{padding:0;}
+.home-page .home-insight-card .post-thumb img{width:100%;height:100%;object-fit:cover;}
+.home-page .home-insight-caption{padding:13px 12px 15px;}
+.home-page .home-insight-caption span{font-size:11px;line-height:1.4;}
+.home-page .home-insight-caption h3{font-size:14px;line-height:1.5;}
+.home-page .home-insight-caption p{display:none;margin:7px 0 0;font-size:13px;line-height:1.65;color:#617186;overflow-wrap:anywhere;word-break:keep-all;}
+.home-page .home-insight-caption .post-read{display:block;color:#0b5077;margin-top:9px;font-weight:800;}
+.home-page .home-blog-grid[data-count="1"] .home-insight-card>a{display:grid;grid-template-columns:minmax(0, .75fr) minmax(0,1.25fr);align-items:stretch;}
+.home-page .home-blog-grid[data-count="1"] .post-thumb{aspect-ratio:auto;min-height:165px;}
+.home-page .home-blog-grid[data-count="1"] .home-insight-caption{padding:16px;display:flex;flex-direction:column;justify-content:center;}
+.home-page .home-blog-grid[data-count="1"] h3{font-size:16px;}
+.home-page .home-blog-grid[data-count="1"] .home-insight-caption p{display:block;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.home-page .post-status{grid-column:1/-1;font-size:14px;line-height:1.65;color:#5b6f82;padding:18px 0;}
+.home-page .home-contact-panel{min-height:260px;display:flex;align-items:center;}
+.home-page .home-contact-content{width:100%;}
+@media(max-width:1020px){.home-page .home-hero,.home-page .home-hero-wrap{min-height:430px;}.home-page .home-hero-content{padding:64px 0 70px;}.home-page .home-business-grid{gap:14px;}}
+@media(max-width:860px){.home-page .home-hero-wrap{padding-inline:24px;}.home-page .home-hero h1{font-size:clamp(32px,5.5vw,46px);}.home-page .home-business-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:620px;}.home-page .home-hero p{font-size:16px;}}
+@media(max-width:720px){.home-page .home-hero,.home-page .home-hero-wrap{min-height:0;}.home-page .home-hero-content{padding:56px 0 58px;}.home-page .home-hero h1{font-size:clamp(27px,7.1vw,40px);line-height:1.32;}.home-page .home-hero .home-kicker{font-size:11px;letter-spacing:.11em;margin-bottom:18px;}.home-page .home-hero p{font-size:14px;max-width:33ch;margin-top:17px;}.home-page .home-hero-actions{margin-top:25px;gap:8px;}.home-page .home-hero-actions .btn{font-size:12px;min-height:44px;padding:10px 12px;}.home-page .home-business{padding:38px 0 45px;}.home-page .home-business-grid{gap:12px;}.home-page .home-business-card-body{min-height:91px;padding:11px 10px;display:block;}.home-page .home-business-card .business-icon{width:23px;height:23px;margin:0 0 4px;}.home-page .home-business-card h3{font-size:14px;}.home-page .home-business-card p{font-size:11px;}.home-page .home-blog-grid:not([data-count="1"]){grid-template-columns:1fr;}.home-page .home-blog-grid .home-insight-card>a{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);}.home-page .home-insight-card .post-thumb{aspect-ratio:auto;min-height:116px;}.home-page .home-blog-grid[data-count="1"] .home-insight-caption{padding:12px;}.home-page .home-blog-grid[data-count="1"] h3{font-size:14px;}.home-page .home-blog-grid[data-count="1"] .home-insight-caption p{font-size:11px;}.home-page .home-contact-panel{min-height:220px;}}
