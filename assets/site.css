@@ -948,3 +948,35 @@
 @media(max-width:360px){
   .biz-panel .inquiry-heading{font-size:17.5px}
 }
+
+
+/* ===== 2026-11-22 | Whole-site natural line breaks & responsive typography =====
+   Korean sentences break at word boundaries wherever possible. Only long,
+   unspaced strings may break inside words to avoid horizontal overflow. */
+:where(h1,h2,h3,h4,p,li,dt,dd,blockquote,figcaption,label,td,th,
+  .eyebrow,.badge,.panel-badge,.flow-card span,.check-row span,.field-chips span,
+  .biz-card,.business-overview,.footer-company,.footer-copy,.btn,.nav a){
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+:where(h1,h2,h3,h4){text-wrap:balance}
+:where(p,li,blockquote){text-wrap:pretty}
+:where(.hero-inner,.hero-copy,.biz-panel,.panel-title,.panel-title-copy,
+ .business-overview,.business-overview-main,.business-overview-points,
+ .biz-grid,.biz-card,.check-grid,.check-card,.flow-card,.process-split,.process-panel,
+ .quote-shell,.quote-head,.field,.form-grid,.section-head,
+ .fee-guide-summary,.fee-section-heading,.footer-company){min-width:0}
+:where(.section-head,.hero-copy,.biz-intro,.business-overview-main,.fee-guide-summary) p{
+  word-break:keep-all;overflow-wrap:break-word;
+}
+/* Do not force longer mobile titles onto a single unbreakable line. */
+.biz-panel .inquiry-heading span{white-space:normal}
+:where(.field input,.field textarea,.field select){min-width:0;max-width:100%}
+:where(.fee-table,.table-wrap){max-width:100%}
+.footer-company{line-height:1.85}
+@media(max-width:620px){
+  .hero-copy h1 .hero-main-line,.hero-copy h1 .accent{max-width:100%}
+  .biz-panel .inquiry-heading span{white-space:normal}
+  .footer-company{font-size:12.5px;line-height:1.85}
+  :where(.flow-card,.check-card,.biz-card,.process-panel){overflow-wrap:break-word}
+}

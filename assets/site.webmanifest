@@ -1,0 +1,20 @@
+{
+  "name": "METAS CORPORATION",
+  "short_name": "METAS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f9fc",
+  "theme_color": "#062338",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png?v=20261122-final-powder",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png?v=20261122-final-powder",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

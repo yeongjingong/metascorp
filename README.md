@@ -64,3 +64,25 @@ const GOOGLE_SCRIPT_URL = 'PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
 - `Code.gs`를 Google Apps Script 웹 앱으로 배포한 뒤, 발급된 `/exec` 주소를 `index.html`의 `GOOGLE_SCRIPT_URL`에 입력해야 합니다.
 - 연결이 완료되면 접수 성공 팝업이 표시되고 입력값과 첨부파일 선택 내용이 자동으로 초기화됩니다.
 - 웹 앱 URL이 입력되지 않은 상태에서는 메일 작성 창으로 이동하지 않고 관리자 설정 안내만 표시됩니다.
+
+## 2026-11-22 업데이트: 기업 브랜딩 및 줄바꿈 정비
+
+- `assets/favicon.png`, `favicon.ico`, `assets/icon-192.png`, `assets/icon-512.png`, `assets/apple-touch-icon.png`: 기존 METAS 공식 심벌에 기반한 파비콘 패키지
+- `assets/og-metas-corporation.jpg`: 1200×630px 기업 소개용 OG 이미지. 홈페이지와 서비스/수수료/블로그 페이지의 `og:image` 및 Twitter Card에 연결
+- 전 페이지의 `canonical`, 페이지별 메타 설명, OG 정보, 웹 앱 아이콘 참조를 통일. 배포 주소는 CNAME `www.metas-corp.co.kr` 기준
+- `assets/site.css`와 블로그 페이지의 스타일에서 한글 단어 경계 중심의 줄바꿈 및 소형 화면 가독성 정비
+- 메인/사업분야/수수료 페이지 하단의 `대표이사 공영진 외 1인` 삭제
+- 기존 페이지에 중복 내장돼 있던 회사 로고 이미지를 `assets/metas-logo.png` 파일 참조로 최적화
+- 기존 폼 제출/메뉴/블로그 자바스크립트 코드는 변경하지 않음
+
+**배포 시 주의:** `metascorp-main/` 폴더 내부의 파일을 기존 웹사이트 루트에 *함께* 업로드해야 합니다. 새 아이콘 및 OG 이미지가 포함된 `assets/` 폴더와 루트의 `favicon.ico`를 누락하지 마세요. SNS 공유 미리보기는 각 플랫폼의 캐시 때문에 변경이 즉시 반영되지 않을 수 있습니다.
+
+## 2026-11-22 최종 배포 패키지: 사용자 확정 이미지 적용
+
+- 파비콘: 사용자가 최종 첨부한 METAS 심벌 이미지에서 PNG(64/180/192/512) 및 루트 `favicon.ico` 생성.
+- OG 이미지: 사용자가 최종 첨부한 **철강 코일·수지 펠릿·산업용 파우더** 시안을 그대로 사용, 1200×630px JPG로 변환.
+- 메인/사업분야/수수료/블로그 목록/블로그 게시물의 OG 및 Twitter 이미지 참조 갱신.
+- 파비콘/OG 리소스에 새 버전 쿼리 적용하여 브라우저와 SNS의 이전 캐시 구분 지원.
+- 이전 수정본의 줄바꿈 정비, 대표이사 문구 삭제, 기존 페이지 기능과 사이트 구조는 유지.
+- 배포: 이 ZIP을 해제하고 `metascorp-main/` **안의 파일/폴더**를 사이트 루트에 업로드.
+- 배포 후 실제 도메인에서 페이지 소스/파비콘/OG URL 접근 및 SNS 미리보기 캐시 갱신 여부 확인 필요.
