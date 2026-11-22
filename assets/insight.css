@@ -1,0 +1,147 @@
+/* METAS 인사이트(블로그) — 2026-11-22 v4.2. 구성: 상단 소개 / 주요 글 / 전체 게시글(검색·카테고리·2열 목록). */
+.ins,.ins-header,.ins-footer{--navy:#0a365a;--navy2:#062338;--ink:#0e2233;--line:#dde6ee}
+.ins{--navy:#0a365a;--navy2:#062338;--ink:#0e2233;--text:#2b3f50;--muted:#4f6375;--label:#0a7183;--line:#dde6ee;--soft:#f4f8fb;
+  margin:0;background:#fff;color:var(--text);font-family:var(--font-sans,"Pretendard Variable",Pretendard,sans-serif);line-height:1.7;word-break:keep-all;overflow-wrap:break-word}
+.ins *{box-sizing:border-box}
+.ins a{color:inherit}
+.ins .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- 헤더 ---------- */
+.ins-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.ins-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
+.ins-header .brand img{height:34px;width:auto;display:block}
+.ins-nav{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.ins-nav a{display:block;padding:8px 13px;font-size:15px;font-weight:700;color:#24384a;text-decoration:none}
+.ins-nav a:hover,.ins-nav a[aria-current="page"]{color:var(--navy)}
+.ins-nav a[aria-current="page"]{box-shadow:inset 0 -2px 0 var(--navy)}
+.ins-cta{display:inline-flex;align-items:center;height:40px;padding:0 16px;background:var(--navy);color:#fff!important;font-size:14px;font-weight:800;text-decoration:none;white-space:nowrap}
+.ins-cta:hover{background:#0b5fa8}
+
+/* ---------- 1. 상단 소개 ---------- */
+.ins-hero{background:linear-gradient(110deg,#071e39 0%,#0c3155 60%,#14546a 100%);color:#fff}
+.ins-hero .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding-top:64px;padding-bottom:60px}
+.ins-kicker{font-size:12.5px;font-weight:900;letter-spacing:.16em;color:#79dce0;margin:0 0 14px}
+.ins-hero h1{margin:0;font-size:clamp(30px,3.6vw,46px);line-height:1.25;font-weight:900;letter-spacing:-.03em;color:#fff}
+.ins-hero h1 em{font-style:normal;color:#79dce0}
+.ins-hero p{margin:18px 0 0;font-size:16.5px;color:#cfe0ec;max-width:560px}
+.ins-archive{border-left:1px solid rgba(255,255,255,.22);padding:6px 0 6px 36px;min-width:190px}
+.ins-archive span{display:block;font-size:12px;font-weight:900;letter-spacing:.16em;color:#79dce0}
+.ins-archive strong{display:inline-block;font-size:56px;line-height:1.05;font-weight:900;letter-spacing:-.03em;margin-top:6px}
+.ins-archive small{font-size:15px;font-weight:700;color:#cfe0ec;margin-left:6px}
+.ins-archive p{margin:4px 0 0;font-size:13.5px;color:#bdd3e3}
+
+/* ---------- 공통 섹션 머리 ---------- */
+.ins-section{padding:56px 0 8px}
+.ins-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+.ins-head .ins-kicker{color:var(--label);margin-bottom:8px}
+.ins-head h2{margin:0;font-size:27px;font-weight:900;color:var(--ink);letter-spacing:-.025em;line-height:1.3}
+.ins-head h2 small{font-size:15px;font-weight:700;color:var(--muted);margin-left:8px;letter-spacing:0}
+.ins-head p{margin:6px 0 0;font-size:15px;color:var(--muted)}
+.ins-more{font-size:14px;font-weight:800;color:var(--navy);text-decoration:none;white-space:nowrap}
+.ins-more:hover{text-decoration:underline}
+
+/* 썸네일 (이미지 없으면 카테고리 이름이 들어간 네이비 칸) */
+.ins-thumb{display:block;background:var(--soft);overflow:hidden;position:relative;flex:none}
+.ins-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.ins-thumb.placeholder{background:linear-gradient(135deg,#0a365a,#14546a);color:#fff;display:grid;place-items:center;text-align:center;padding:10px}
+.ins-thumb.placeholder span{font-size:12px;font-weight:900;letter-spacing:.08em;line-height:1.35}
+.ins-thumb.placeholder span b{display:block;font-size:11.5px;letter-spacing:.18em;color:#79dce0;margin-bottom:4px}
+
+.ins-cat{font-size:13px;font-weight:800;color:var(--label)}
+.ins-date{font-size:13px;color:var(--muted);margin-left:8px}
+
+/* ---------- 2. 주요 글 ---------- */
+.ins-featured{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}
+.ins-featured.single{grid-template-columns:1fr}
+.ins-feat-main{display:grid;grid-template-columns:1fr 240px;gap:26px;align-items:center;border:1px solid var(--line);border-top:3px solid var(--navy);background:var(--soft);padding:28px;text-decoration:none;min-height:260px}
+.ins-feat-main h3{margin:10px 0 12px;font-size:23px;line-height:1.4;font-weight:900;color:var(--ink);letter-spacing:-.02em}
+.ins-feat-main p{margin:0;font-size:15px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ins-feat-main .ins-go{display:inline-block;margin-top:18px;font-size:14px;font-weight:800;color:var(--navy)}
+.ins-feat-main .ins-thumb{aspect-ratio:1/1;width:100%}
+.ins-feat-main:hover h3{text-decoration:underline;text-underline-offset:4px}
+.ins-feat-side{display:grid;gap:18px;align-content:start}
+.ins-feat-sub{display:grid;grid-template-columns:104px 1fr;gap:18px;align-items:center;border:1px solid var(--line);padding:18px;text-decoration:none;background:#fff}
+.ins-feat-sub .ins-thumb{aspect-ratio:1/1;width:104px}
+.ins-feat-sub h3{margin:6px 0 4px;font-size:16.5px;line-height:1.45;font-weight:800;color:var(--ink)}
+.ins-feat-sub p{margin:0;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ins-feat-sub:hover h3{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- 3. 전체 게시글 ---------- */
+.ins-all{padding-top:56px;margin-top:48px;border-top:1px solid var(--line)}
+.ins-search{position:relative;width:300px;max-width:100%}
+.ins-search input{width:100%;height:44px;border:1px solid var(--line);background:#fff;padding:0 14px 0 40px;font:inherit;font-size:14.5px;color:var(--ink);border-radius:0}
+.ins-search input:focus{outline:2px solid var(--navy);outline-offset:-1px}
+.ins-search svg{position:absolute;left:13px;top:50%;width:17px;height:17px;transform:translateY(-50%);fill:none;stroke:#5d7080;stroke-width:2}
+.ins-tabs{display:flex;flex-wrap:wrap;gap:2px;border-bottom:2px solid var(--navy);margin:0 0 4px;padding:0;list-style:none}
+.ins-tabs button{appearance:none;border:0;background:none;font:inherit;font-size:15px;font-weight:700;color:#4a5e6f;padding:11px 16px;cursor:pointer;position:relative}
+.ins-tabs button small{font-size:12.5px;font-weight:700;color:#7b8c9b;margin-left:4px}
+.ins-tabs button:hover{color:var(--navy)}
+.ins-tabs button[aria-selected="true"]{color:#fff;background:var(--navy)}
+.ins-tabs button[aria-selected="true"] small{color:#bcd3e4}
+.ins-list{display:grid;grid-template-columns:1fr 1fr;column-gap:40px;margin:0;padding:0;list-style:none}
+.ins-row a{display:grid;grid-template-columns:92px 1fr 18px;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.ins-row .ins-thumb{width:92px;aspect-ratio:1/1}
+.ins-row h3{margin:4px 0 3px;font-size:16.5px;line-height:1.45;font-weight:800;color:var(--ink)}
+.ins-row p{margin:0;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.ins-row .ins-arrow{width:16px;height:16px;fill:none;stroke:#6b7f90;stroke-width:2}
+.ins-row a:hover h3{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+.ins-row a:hover .ins-arrow{stroke:var(--navy)}
+.ins-empty{grid-column:1/-1;padding:56px 0;text-align:center;color:var(--muted);font-size:15px;border-bottom:1px solid var(--line)}
+.ins-empty a{color:var(--navy);font-weight:800}
+.ins-pager{text-align:center;margin-top:28px}
+.ins-pager button{appearance:none;border:1px solid var(--navy);background:#fff;color:var(--navy);font:inherit;font-size:14.5px;font-weight:800;padding:11px 28px;cursor:pointer}
+.ins-pager button:hover{background:var(--navy);color:#fff}
+.ins-note{margin:26px 0 80px;font-size:13.5px;color:var(--muted)}
+
+/* ---------- 푸터 ---------- */
+.ins-footer{background:#082746;color:#c6d9e6;padding:36px 0 40px;font-size:13.5px;line-height:1.75}
+.ins-footer strong{color:#fff;font-size:14px;display:block;margin-bottom:4px}
+.ins-footer p{margin:0}
+.ins-footer a{color:#e8f3fb;text-decoration:none}
+.ins-footer a:hover{text-decoration:underline}
+.ins-footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px}
+.ins-footer b{color:#fff}
+.ins-footer small{display:block;margin-top:10px;font-size:12.5px;color:#a9c2d4}
+
+/* ---------- 반응형 ---------- */
+@media(max-width:1020px){
+  .ins-nav{display:none}
+  .ins-featured{grid-template-columns:1fr}
+  .ins-list{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .ins .wrap{padding:0 18px}
+  .ins-header .wrap{height:62px}
+  .ins-header .brand img{height:30px}
+  .ins-hero .wrap{grid-template-columns:1fr;gap:28px;padding-top:44px;padding-bottom:40px}
+  .ins-hero p{font-size:15px}
+  .ins-archive{border-left:0;border-top:1px solid rgba(255,255,255,.22);padding:18px 0 0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .ins-archive strong{font-size:38px;margin:0}
+  .ins-archive p{width:100%}
+  .ins-section{padding-top:40px}
+  .ins-head{flex-direction:column;align-items:stretch;gap:12px}
+  .ins-head h2{font-size:23px}
+  .ins-search{width:100%}
+  .ins-feat-main{grid-template-columns:1fr;padding:20px;gap:18px;min-height:0}
+  .ins-feat-main .ins-thumb{order:-1;aspect-ratio:16/9}
+  .ins-feat-main h3{font-size:20px}
+  .ins-feat-sub{grid-template-columns:80px 1fr;padding:14px;gap:14px}
+  .ins-feat-sub .ins-thumb{width:80px}
+  .ins-all{margin-top:36px;padding-top:40px}
+  .ins-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .ins-tabs::-webkit-scrollbar{display:none}
+  .ins-tabs button{white-space:nowrap;padding:10px 13px;font-size:14.5px}
+  .ins-row a{grid-template-columns:76px 1fr;gap:14px;padding:16px 0}
+  .ins-row .ins-thumb{width:76px}
+  .ins-row .ins-arrow{display:none}
+  .ins-row h3{font-size:15.5px}
+}
+
+/* 글 상세 페이지에서도 헤더 폭은 사이트 전체 기준(1180px) — 본문 폭(760px)과 분리 */
+html body .ins-header .wrap{max-width:1180px;width:100%;margin:0 auto;padding:0 24px;min-height:0}
+html body .ins-footer .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+html body article.wrap{padding-top:56px;padding-bottom:90px}
+@media(max-width:720px){
+  html body .ins-header .wrap,html body .ins-footer .wrap{padding:0 18px}
+  html body article.wrap{padding-top:36px;padding-bottom:60px}
+}

@@ -31,22 +31,24 @@
     grid.replaceChildren(element('p', 'post-status', message));
   }
   function thumbnail(post, container, cls) {
-    const thumb = resolvePath(post.thumbnail);
-    if (!thumb) {
+    const label = ({'무역 실무':'무역 정보'})[post.category] || post.category || '무역 정보';
+    const fallback = () => {
       container.className = cls + ' placeholder';
-      container.textContent = 'METAS TRADE BLOG';
-      return;
-    }
+      container.replaceChildren();
+      const t = element('span'); t.append(element('b','', 'METAS'), document.createTextNode(label)); container.append(t);
+    };
+    const thumb = resolvePath(post.thumbnail);
+    if (!thumb) { fallback(); return; }
     container.className = cls + ' has-image';
     const img = element('img');
     img.alt = String(post.alt || post.title); img.loading = 'lazy'; img.decoding = 'async';
-    img.addEventListener('error', () => { container.className = cls + ' placeholder'; container.textContent = 'METAS TRADE BLOG'; }, {once:true});
+    img.addEventListener('error', fallback, {once:true});
     img.src = thumb; container.append(img);
   }
   function renderCard(post) {
     const article = element('article', home ? 'home-insight-card' : 'blog-card');
     const link = element('a'); link.href = post.href;
-    const date = [post.category || '무역 실무', post.date].filter(Boolean).join(' · ');
+    const date = [({'무역 실무':'무역 정보'})[post.category] || post.category || '무역 정보', post.date].filter(Boolean).join(' · ');
     if (home) {
       const thumb = element('div'); thumbnail(post, thumb, 'post-thumb');
       const caption = element('div','home-insight-caption');

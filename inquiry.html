@@ -69,6 +69,7 @@
 </div>
 <div class="field"><label for="bizField">관심 사업분야</label>
 <select id="bizField">
+<option value="" selected>선택해 주세요 (모르시면 그대로 두셔도 됩니다)</option>
 <option>특수 소재 · 코팅 분말 (Powder &amp; Coating Solutions)</option>
 <option>특수 금속 · 합금 (Specialty Metals &amp; Alloys)</option>
 <option>모합금 (Master Alloys)</option>
@@ -207,7 +208,7 @@
 </button>
 <script>
   // Google Apps Script 배포 후 받은 웹 앱 URL을 아래에 넣어주세요. (README.md 참고)
-  const GOOGLE_SCRIPT_URL = 'PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyjqMd2rb49zEl6B7hy9KIzOrEblso11nvtdVUdEoK_jp1mUTl9PdtfKBC2CZG67fCBcw/exec';
 
   const el = id => document.getElementById(id);
   const val = id => (el(id)?.value || '').trim() || '-';
@@ -260,7 +261,7 @@
       `회신 이메일: ${val('email')}\n\n` +
       `■ 거래 정보\n` +
       `거래 유형: ${val('tradeType')}\n` +
-      `관심 사업분야: ${val('bizField')}\n` +
+      `관심 사업분야: ${val('bizField') === '-' ? '미선택' : val('bizField')}\n` +
       `품명: ${val('itemName')}\n` +
       `예상 수량·규모: ${val('quantity')}\n` +
       `${countryLabelText}: ${val('country')}\n` +
@@ -319,7 +320,7 @@
   el('submitBtn').addEventListener('click', async () => {
     const btn = el('submitBtn');
     const payload = {
-      subject: `[메타스 업무문의] ${val('company')} / ${val('bizField')}`,
+      subject: `[메타스 업무문의] ${val('company')} / ${val('bizField') === '-' ? val('itemName') : val('bizField')}`,
       body: makeBody(),
       email: val('email'),
       website: (el('website').value || '').trim()

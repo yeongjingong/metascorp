@@ -96,3 +96,8 @@
 .home-page .home-business-card .mx-seg{white-space:nowrap}
 .home-page .home-business-card picture{display:block}
 .home-page .home-business-card picture{display:block}
+
+/* 인사이트 썸네일 없는 글 — 인사이트 페이지와 같은 네이비 + 카테고리 표시 (v4.3) */
+.home-page .post-thumb.placeholder{background:linear-gradient(135deg,#0a365a,#14546a)!important;color:#fff!important;display:grid;place-items:center;text-align:center}
+.home-page .post-thumb.placeholder span{font-size:14px;font-weight:900;letter-spacing:.06em;line-height:1.4}
+.home-page .post-thumb.placeholder span b{display:block;font-size:12px;letter-spacing:.18em;color:#79dce0;margin-bottom:4px}
