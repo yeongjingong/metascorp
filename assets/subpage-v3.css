@@ -34,3 +34,5 @@
 .faq-item summary:hover{background:#f9fbfd}
 .faq-item p{margin:0;padding:0 22px 22px 50px;font-size:14.5px;line-height:1.75;color:var(--text);word-break:keep-all}
 @media(max-width:590px){.faq-item summary{padding:17px 14px;font-size:15px}.faq-item p{padding:0 14px 18px 40px;font-size:14px}}
+
+#materials{scroll-margin-top:84px}

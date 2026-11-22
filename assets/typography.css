@@ -38,7 +38,6 @@ html body input::placeholder,html body textarea::placeholder{color:#7b8c9b;opaci
 
 /* ---------- 공통 하위 페이지 (site.css) ---------- */
 .page-top .eyebrow,.eyebrow{font-size:12px}
-.section p,.section li{color:var(--text)}
 .footer-desc{font-size:13px}
 .footer-contact a,.footer-contact-title{font-size:14px}
 .footer-company,.footer-copy,.policy-link{font-size:13px;line-height:1.75}
@@ -54,8 +53,8 @@ html body input::placeholder,html body textarea::placeholder{color:#7b8c9b;opaci
 .biz-card h3 small{font-size:12px;color:#5d6f7f;letter-spacing:.04em}
 .biz-card p{font-size:14px;line-height:1.6;color:var(--muted)}
 .biz-jump a{font-size:14px}
-.sourcing-panel p{font-size:15px;line-height:1.75}
-.sourcing-panel li{font-size:14.5px}
+.sourcing-panel p{font-size:15px;line-height:1.75;color:#c9dbe8}
+.sourcing-panel li{font-size:14.5px;color:#e6f0f7}
 
 /* 수수료 */
 .fee-guide-badge{font-size:12.5px}
@@ -119,3 +118,10 @@ html body.home-page .home-editorial-heading .home-kicker{font-size:12px}
   html body.home-page .home-section-title-row>.home-text-link{font-size:13px}
 }
 html body .back{border-radius:0}
+
+/* 어두운 배경 위 글자 — 밝은 색으로 고정 (v3.4) */
+html body .section.dark p,html body .contact-cta p{color:#c9dbe8}
+html body .section.dark h2,html body .contact-cta h2,html body .sourcing-panel h3{color:#fff}
+html body .sourcing-panel .cat{color:#8fd8e6}
+html body.home-page .mx-hero-fact,html body.home-page .mx-identity-body .mx-motto{color:#bdd3e3}
+@media(max-width:720px){html body.home-page .home-hero .home-kicker{font-size:12px}}

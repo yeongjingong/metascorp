@@ -83,3 +83,16 @@
 @media(max-width:590px){
  .home-page .home-footer-links div{flex-wrap:wrap}
 }
+
+/* ---------- 주요 사업분야 5개 카드 (v3.9) ---------- */
+.home-page .home-business-grid{grid-template-columns:repeat(5,minmax(0,1fr));max-width:none;gap:16px}
+.home-page .home-business-card-body{padding:14px 12px 16px}
+@media(max-width:1120px){.home-page .home-business-grid{gap:12px}.home-page .home-business-card h3{font-size:15.5px}}
+@media(max-width:1020px){
+  .home-page .home-business-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px;margin-inline:auto}
+  .home-page .home-business-grid>.home-business-card:first-child{grid-column:1/-1}
+  .home-page .home-business-grid>.home-business-card:first-child img{aspect-ratio:16/9!important;object-position:center}
+}
+.home-page .home-business-card .mx-seg{white-space:nowrap}
+.home-page .home-business-card picture{display:block}
+.home-page .home-business-card picture{display:block}
